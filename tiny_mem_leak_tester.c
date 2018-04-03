@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 
 // A definition of BST node
 struct node{
@@ -10,6 +9,9 @@ struct node{
 
 // BST root node
 static struct node* root_node = NULL;
+
+// Count of BST node
+static int node_count = 0;
 
 // Create a new node for BST
 struct node* create_new_node(void* pointer)
@@ -120,7 +122,7 @@ void traversal(struct node* root)
   if(root != NULL)
   {
     traversal(root->left);
-    printf("%p->", root->pointer);
+    printf("%p\n", root->pointer);
     traversal(root->right);
   }
 }
@@ -145,6 +147,8 @@ void* tiny_mem_leak_malloc(size_t size, const char *file, int line, const char *
   
   root_node = insert_new_node(root_node, ptr);
 
+  node_count++;
+
   return ptr;
 }
 
@@ -165,11 +169,14 @@ void tiny_mem_leak_free(void* pointer, const char *file, int line, const char *f
   free(pointer);
 
   root_node = delete_node(root_node, pointer);
+
+  node_count--;
 }
 
 void Get_Result()
 {
   printf("----The list of the memory location doesn't free----\n");
   traversal(root_node);
-  printf("\n------------------End of the list-------------------");
+  printf("Number of node in list: %d\n", node_count);
+  printf("------------------End of the list-------------------\n");
 }

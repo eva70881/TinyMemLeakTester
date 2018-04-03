@@ -10,6 +10,16 @@ int main(int argc, char** argv)
     char* w = (char*)malloc(sizeof(char) * 100);
     char* e = (char*)malloc(sizeof(char) * 100);
     char* r = (char*)realloc(t, sizeof(char) * 50);
+    char* t1 = (char*)malloc(sizeof(char) * 100);
+    char* t2 = (char*)malloc(sizeof(char) * 100);
+    char* t3 = (char*)malloc(sizeof(char) * 100);
+    char* t4 = (char*)malloc(sizeof(char) * 100);
+    char* t5 = (char*)malloc(sizeof(char) * 100);
+    char* t6 = (char*)malloc(sizeof(char) * 100);
+    char* t7 = (char*)malloc(sizeof(char) * 100);
+    char* t8 = (char*)malloc(sizeof(char) * 100);
+    char* t9 = (char*)malloc(sizeof(char) * 100);
+    char* t0 = (char*)malloc(sizeof(char) * 100);
     free(r);
     free(q);
     free(w);

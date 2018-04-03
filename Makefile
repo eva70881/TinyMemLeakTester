@@ -20,4 +20,4 @@ $(TARGET):
 .PHONY: clean
 clean:
 	$(Q)echo "  Cleaning '$(TARGET)' ..."
-	$(Q)$(RM) $(TARGET)
+	$(Q)$(RM) $(TARGET)_*
