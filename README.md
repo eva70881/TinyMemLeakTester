@@ -29,9 +29,9 @@ When you call the realloc function, the STDOUT will print:
 
 > | realloc | File name | Line number | Function name | Pointer address | Size of memory reallocated |
 
-### void* malloc (size_t size);
+### void free (void* ptr);
 
-When you call the malloc function, the STDOUT will print:
+When you call the free function, the STDOUT will print:
 
 > | free    | File name | Line number | Function name | Pointer address | 0 |
 
