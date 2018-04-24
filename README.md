@@ -9,8 +9,8 @@ Including the header file **tiny_mem_leak_tester.h** to which file you using any
 Copy the source code and header files into your projects.
 
 > The files you needs to copies:
->> tiny_mem_leak_tester.c
->> tiny_mem_leak_tester.h
+>> * tiny_mem_leak_tester.c
+>> * tiny_mem_leak_tester.h
 
 ---
 ## Outputs:
