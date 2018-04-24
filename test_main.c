@@ -4,7 +4,7 @@
 
 int main(int argc, char** argv)
 {
-    printf("Start\n");
+    printf("--Main program start--\n");
     char* t = (char*)malloc(sizeof(char) * 100);
     char* q = (char*)malloc(sizeof(char) * 100);
     char* w = (char*)malloc(sizeof(char) * 100);
@@ -24,6 +24,7 @@ int main(int argc, char** argv)
     free(q);
     free(w);
     free(e);
+    printf("--Main program end--\n");
     Get_Result();
     return 0;
 }
